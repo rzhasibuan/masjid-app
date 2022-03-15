@@ -1,0 +1,366 @@
+.slider h3, .slider h5, .clients h3, .clients h6 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-container {
+    height: 20%;
+}
+
+.parallax img {
+    filter: grayscale(1);
+    opacity: 0.5 !important;
+}
+
+.clients img {
+    max-width: 150px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+}
+
+section, footer {
+    padding: 20px 0;
+}
+
+.logotext {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        display: inline;
+    }
+    .logotext {
+        /* display: inline; */
+    }
+}
+
+.judulcard {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#button {
+    display: inline-block;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    transition: background-color .9s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    /* font-weight: normal; */
+    /* font-style: normal; */
+    font-size: 0.8em;
+    line-height: 40px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(238, 68, 6);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+}
+
+#button:active {
+    background-color: rgb(65, 64, 64);
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#whatsapp {
+    display: inline-block;
+    /* background-color: green; */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    transition: background-color .9s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#whatsapp::after {
+    /* content: "\f077"; */
+    font-family: FontAwesome;
+    /* font-weight: normal; */
+    /* font-style: normal; */
+    font-size: 0.8em;
+    line-height: 40px;
+    color: #fff;
+}
+
+#whatsapp:hover img {
+    cursor: pointer;
+    /* background-color: rgb(238, 68, 6); */
+    background: transparent;
+    /* box-shadow: 1px 1px 10px gray; */
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+}
+
+#whatsapp:active {
+    background-color: rgb(65, 64, 64);
+}
+
+#whatsapp.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* berita */
+
+/* text berita */
+
+.services .textberita {
+    opacity: 0;
+    transform: translate(0, -60px);
+    transition: 2s;
+}
+
+.services .textberita.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* hr berita */
+
+.services .hr-berita {
+    border: 1px solid grey;
+    width: 90px;
+    opacity: 0;
+    transition: transform 3s;
+    transform: scale(0.0);
+}
+
+.services .hr-berita.muncul {
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+/* konten berita */
+
+.services .card {
+    opacity: 0;
+    transform: translate(0, 70px);
+    transition: 3s;
+}
+
+.services .card.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* end berita */
+
+/* about */
+
+/* about text */
+
+.about .textTentang {
+    opacity: 0;
+    transform: translate(-60px, 0);
+    transition: 3s;
+}
+
+.about .textTentang.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* about konten */
+
+.about .col {
+    opacity: 0;
+    transform: translate(0, 40px);
+    transition: 3s;
+}
+
+.about .col.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* end about */
+
+/* pengumuman */
+
+/* pengumuman text */
+
+.services2 .textPengumuman {
+    opacity: 0;
+    transform: translate(60px, 0);
+    transition: 3s;
+}
+
+.services2 .textPengumuman.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* pengumuman hr */
+
+.services2 .hr-pengumuman {
+    border: 1px solid grey;
+    width: 150px;
+    opacity: 0;
+    transition: transform 3s;
+    transform: scale(0.0);
+}
+
+.services2 .hr-pengumuman.muncul {
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+/* pengumuman konten */
+
+.services2 .card {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 3s;
+}
+
+.services2 .card.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* end pengumuman */
+
+/* informasi */
+
+/* judul besar */
+
+.clients .h3 {
+    opacity: 0;
+    transform: translate(60px, 0);
+    transition: 3s;
+}
+
+.clients .h3.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* judul kecil */
+
+.clients .h6 {
+    opacity: 0;
+    transform: translate(-60px, 0);
+    transition: 3s;
+}
+
+.clients .h6.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* gambar */
+
+.clients .col {
+    opacity: 0;
+    transition: transform 3s;
+    transform: scale(0.0);
+}
+
+.clients .col.muncul {
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+/* end informasi */
+
+/* kontak kami */
+
+/* end kontak kami */
+
+/* video */
+
+.video {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.maps {
+    padding: 0;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+}
+
+.header-footer {
+    margin: 0;
+    font-size: 20px;
+}
+
+.sosial-media {
+    margin-right: 10px;
+}
+
+.header-main {
+    padding: 0;
+}
+
+.form-pendaftaran {
+    margin-top: 10px;
+}
+
+.detailEvent {
+    margin-top: 40px;
+}
+
+.kategoriLabel {
+    border: 1px solid red !important;
+    padding: 5px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.gambarEvent {
+    margin-top: 10px;
+}
+
+.pendaftaran {
+    margin-top: 10px;
+    padding: 10px !important;
+}
+
+.jadwalEvent {
+    padding: 10px !important;
+    margin-top: 10px;
+}
+
+.lokasiEvent {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.tabsDeskripsi {
+    margin-top: 10px;
+}
+
+footer {
+    padding: 10px;
+}
+
+.brand-logo img {
+    padding: 5px;
+}

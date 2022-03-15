@@ -1,0 +1,10 @@
+[18-Aug-2020 03:30:55 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[18-Aug-2020 03:30:58 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[18-Aug-2020 03:34:17 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[18-Aug-2020 03:34:17 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[27-Aug-2020 05:10:55 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[27-Aug-2020 05:10:58 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[27-Aug-2020 05:10:58 UTC] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[29-Aug-2020 01:49:59 UTC] PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /home/k2841085/public_html/public/assets/bower_components/ckeditor/kcfinder/lib/class_image.php on line 119
+[31-Aug-2020 02:15:17 UTC] PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /home/k2841085/public_html/public/assets/bower_components/ckeditor/kcfinder/lib/class_image.php on line 119
+[02-Sep-2020 04:02:33 UTC] PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /home/k2841085/public_html/public/assets/bower_components/ckeditor/kcfinder/lib/class_image.php on line 119
