@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/masjid.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/masjid.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/templates/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/templates/default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/templates/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/templates/partials/head.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660933879193</updated>
-      <workItem from="1660933888274" duration="592000" />
+      <workItem from="1660933888274" duration="699000" />
     </task>
     <servers />
   </component>
