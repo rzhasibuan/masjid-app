@@ -31,6 +31,22 @@
                     </li>
                 </ul>
             </li>
+            {{--module keuangan--}}
+            <li class="{{$subCreateAtricle   ?? ""}} {{$subShowArticle   ?? ""}}  treeview">
+                <a href=""><i class="fa fa-money"></i> <span>Keuangan</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="nav-item {{$subCreateAtricle   ?? ""}}">
+                        <a href="{{route('admin.news.create')}}" class="nav-link"><i class="fa fa-plus"></i><span>Kas Masjid</span></a>
+                    </li>
+                    <li class="nav-item {{$subShowArticle   ?? ""}}">
+                        <a href="{{route('admin.news.index')}}" class="nav-link"><i class="fa fa-newspaper-o"></i><span>Laporan</span></a>
+                    </li>
+                </ul>
+            </li>
             {{--manajement akses--}}
             <li class="{{$subUser   ?? ""}} {{$subRole   ?? ""}} {{$subPermission   ?? ""}}  treeview">
                 <a href=""><i class="fa fa-users"></i> <span>Access Management</span>
