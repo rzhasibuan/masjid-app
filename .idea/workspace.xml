@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_08_20_082545_create_keuangan_kas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_08_20_082545_create_keuangan_kas_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660933879193</updated>
       <workItem from="1660933888274" duration="1757000" />
-      <workItem from="1660982817830" duration="873000" />
+      <workItem from="1660982817830" duration="1193000" />
     </task>
     <servers />
   </component>

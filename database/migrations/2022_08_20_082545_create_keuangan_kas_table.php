@@ -20,7 +20,11 @@ class CreateKeuanganKasTable extends Migration
             $table->string("keterangan");
             $table->string("jenis_catatan");
             $table->float('saldo');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
