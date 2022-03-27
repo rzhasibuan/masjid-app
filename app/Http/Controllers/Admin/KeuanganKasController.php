@@ -10,11 +10,13 @@ class KeuanganKasController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        return view('admin.pages.keuangan.index', [
+            'title' => 'Kelola keuangan masjid'
+        ]);
     }
 
     /**
