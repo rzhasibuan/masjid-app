@@ -4,8 +4,8 @@
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/KeuanganKasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/KeuanganKasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_08_20_082545_create_keuangan_kas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_08_20_082545_create_keuangan_kas_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,9 @@
       <option name="presentableId" value="Default" />
       <updated>1660933879193</updated>
       <workItem from="1660933888274" duration="1757000" />
-      <workItem from="1660982817830" duration="2274000" />
+      <workItem from="1660982817830" duration="10582000" />
+      <workItem from="1661067962056" duration="87000" />
+      <workItem from="1661068411598" duration="2788000" />
     </task>
     <servers />
   </component>

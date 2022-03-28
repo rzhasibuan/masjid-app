@@ -16,10 +16,10 @@ class CreateKeuanganKasTable extends Migration
         Schema::create('keuangan_kas', function (Blueprint $table) {
             $table->id();
             $table->string("tanggal_transaksi");
-            $table->float('nominal');
+            $table->float('nominal', 13, 2);
             $table->string("keterangan");
             $table->string("jenis_catatan");
-            $table->float('saldo');
+            $table->float('saldo', 13, 2);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\KeuanganKas;
+use App\Traits\FlashAlert;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KeuanganKasController extends Controller
 {
+    use FlashAlert;
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +18,10 @@ class KeuanganKasController extends Controller
      */
     public function index()
     {
+        $keuangan = KeuanganKas::orderBy('id','ASC')->get();
         return view('admin.pages.keuangan.index', [
-            'title' => 'Kelola keuangan masjid'
+            'title' => 'Kelola keuangan masjid',
+            'data' => $keuangan
         ]);
     }
 
@@ -37,7 +43,59 @@ class KeuanganKasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'tanggal_transaksi' => 'required',
+            'nominal' => 'required|numeric',
+            'keterangan' => 'required'
+        ]);
+
+        $keuanganSaldo = KeuanganKas::orderBy('id','desc');
+        $keuCount = $keuanganSaldo->count();
+
+        $lastSaldo = $keuanganSaldo->first();
+
+        if($request->jenis_catatan == "pemasukan"){
+            if(!$keuCount > 0) {
+                $saldo = $request->nominal;
+            }else{
+                $saldo = $lastSaldo->saldo + $request->nominal;
+            }
+
+            $keuangan = [
+                'tanggal_transaksi' =>  $request->tanggal_transaksi,
+                'nominal' => $request->nominal,
+                'keterangan' => $request->keterangan,
+                'jenis_catatan' => $request->jenis_catatan,
+                'saldo' => $saldo,
+                'user_id' => auth()->user()->id
+            ];
+
+
+        }elseif ($request->jenis_catatan == "pengeluaran"){
+            if(!$keuCount > 0) {
+                $saldo = $request->nominal;
+            }else{
+                $saldo = $lastSaldo->saldo - $request->nominal;
+            }
+
+            $keuangan = [
+                'tanggal_transaksi' =>  $request->tanggal_transaksi,
+                'nominal' => $request->nominal,
+                'keterangan' => $request->keterangan,
+                'jenis_catatan' => $request->jenis_catatan,
+                'saldo' => $saldo,
+                'user_id' => auth()->user()->id
+            ];
+        }
+        else{
+            echo "gagal";
+        }
+
+        KeuanganKas::create($keuangan);
+
+        return redirect()->route('admin.keuangan.index')->with($this->alertCreated());
+
+
     }
 
     /**
