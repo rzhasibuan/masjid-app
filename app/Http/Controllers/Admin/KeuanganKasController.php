@@ -39,7 +39,7 @@ class KeuanganKasController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -75,7 +75,11 @@ class KeuanganKasController extends Controller
             if(!$keuCount > 0) {
                 $saldo = $request->nominal;
             }else{
-                $saldo = $lastSaldo->saldo - $request->nominal;
+                if ($request->nominal >= $lastSaldo->saldo) {
+                    return redirect()->route('admin.keuangan.index')->with($this->alertDanger("saldo tidak cukup"));
+                }else{
+                    $saldo = $lastSaldo->saldo + $request->nominal;
+                }
             }
 
             $keuangan = [
@@ -88,7 +92,7 @@ class KeuanganKasController extends Controller
             ];
         }
         else{
-            echo "gagal";
+            return redirect()->route('admin.keuangan.index')->with($this->alertNotFound());
         }
 
         KeuanganKas::create($keuangan);
