@@ -73,7 +73,7 @@ class KeuanganKasController extends Controller
 
         }elseif ($request->jenis_catatan == "pengeluaran"){
             if(!$keuCount > 0) {
-                $saldo = $request->nominal;
+                return redirect()->route('admin.keuangan.index')->with($this->alertDanger("saldo tidak cukup"));
             }else{
                 if ($request->nominal >= $lastSaldo->saldo) {
                     return redirect()->route('admin.keuangan.index')->with($this->alertDanger("saldo tidak cukup"));
@@ -144,6 +144,8 @@ class KeuanganKasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = KeuanganKas::findOrFail($id);
+        $data->delete();
+        return redirect()->route('admin.keuangan.index')->with($this->alertDeleted());
     }
 }

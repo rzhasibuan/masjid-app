@@ -143,9 +143,8 @@
                         <td>{{$dt->keterangan}}</td>
                         <td>{{$dt->nominal}}</td>
                         <td>{{$dt->saldo}}</td>
-{{--                        <td>{{$dt->created_at->format('d F, Y')}}</td>--}}
                         <td>
-                            <form action="{{route('admin.news.destroy',[$dt->id])}}" class="d-inline" onsubmit="return confirm('Apakah anda ingin menghapus ini secara permanen ?')" method="POST">
+                            <form action="{{route('admin.keuangan.destroy',[$dt->id])}}" class="d-inline" onsubmit="return confirm('Apakah anda ingin menghapus ini secara permanen ?')" method="POST">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-app btn-sm">
