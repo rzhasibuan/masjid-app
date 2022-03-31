@@ -41,4 +41,5 @@ Route::name('admin.') //pemberian nama seperti admin.user.index
     Route::resource('testimonials', 'TestimonialsController');
     Route::resource('keuangan', 'KeuanganKasController');
     Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
+    Route::get('laporan/kas', 'KeuanganKasController@laporan')->name('laporan.kas');
 });

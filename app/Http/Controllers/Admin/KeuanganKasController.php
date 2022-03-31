@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\KeuanganKas;
 use App\Traits\FlashAlert;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,7 +22,8 @@ class KeuanganKasController extends Controller
         $keuangan = KeuanganKas::orderBy('id','ASC')->get();
         return view('admin.pages.keuangan.index', [
             'title' => 'Kelola keuangan masjid',
-            'data' => $keuangan
+            'data' => $keuangan,
+            'subKeuangan' =>'active'
         ]);
     }
 
@@ -147,5 +149,14 @@ class KeuanganKasController extends Controller
         $data = KeuanganKas::findOrFail($id);
         $data->delete();
         return redirect()->route('admin.keuangan.index')->with($this->alertDeleted());
+    }
+
+    public function laporan()
+    {
+        $keuangan = KeuanganKas::orderBy('id','ASC')->get();
+        $pdf = PDF::loadView('admin.pages.keuangan.laporan', [
+            'data' => $keuangan
+        ]);
+        return $pdf->stream();
     }
 }

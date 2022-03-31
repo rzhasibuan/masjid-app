@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/laporan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/masjid.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/masjid.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/KeuanganKasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/KeuanganKasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/templates/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/templates/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +141,11 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
     </include_path>
   </component>
   <component name="ProjectId" id="2DaOkX9PcLjuMxaXTOX8MONjV8n" />
@@ -169,7 +180,8 @@
       <workItem from="1660933888274" duration="1757000" />
       <workItem from="1660982817830" duration="10582000" />
       <workItem from="1661067962056" duration="87000" />
-      <workItem from="1661068411598" duration="4049000" />
+      <workItem from="1661068411598" duration="4331000" />
+      <workItem from="1640995340888" duration="1411000" />
     </task>
     <servers />
   </component>
