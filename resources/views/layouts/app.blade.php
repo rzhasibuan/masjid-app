@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md shadow-sm" style="color: #6C63FF">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: #00a65a">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -41,7 +41,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Sign In') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}" style="color: #00a65a">{{ __('Sign In') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
