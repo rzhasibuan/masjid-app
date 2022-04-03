@@ -47,6 +47,55 @@
                     </li>
                 </ul>
             </li>
+{{--            ta'mir masjid--}}
+            <li class="{{$subKegiatanCreate   ?? ""}} {{$subKegiatan   ?? ""}}  treeview">
+                <a href=""><i class="fa   fa-sitemap"></i> <span>Ta'mir Masjid</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="nav-item {{$subKegiatan   ?? ""}}">
+                        <a href="{{route('admin.tamir.index')}}" class="nav-link"><i class="fa  fa-user"></i><span>Daftar Ta'mir Masjid</span></a>
+                    </li>
+                    <li class="nav-item {{$subKegiatanCreate   ?? ""}}">
+                        <a href="{{route('admin.tamir.create')}}" class="nav-link"><i class="fa  fa-user-plus"></i><span>Tambah Ta'mir Masjid</span></a>
+                    </li>
+                </ul>
+            </li>
+
+            {{--kegiatan masjid--}}
+            <li class="{{$subKegiatanCreate   ?? ""}} {{$subKegiatan   ?? ""}}  treeview">
+                <a href=""><i class="fa fa-calendar-check-o"></i> <span>Jadwal kegiatan pengajian</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li class="nav-item {{$subKegiatan   ?? ""}}">
+                        <a href="{{route('admin.kegiatan.index')}}" class="nav-link"><i class="fa fa-calendar-check-o"></i><span>Daftar Kegiatan</span></a>
+                    </li>
+                    <li class="nav-item {{$subKegiatanCreate   ?? ""}}">
+                        <a href="{{route('admin.kegiatan.create')}}" class="nav-link"><i class="fa fa-calendar-plus-o"></i><span>Tambah Kegiatan</span></a>
+                    </li>
+                </ul>
+            </li>
+
+            {{--bantuan masjid--}}
+            <li class="{{$subBantuan   ?? ""}}  treeview">
+                <a href=""><i class="fa  fa-heartbeat"></i> <span>Bantuan</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="nav-item {{$subBantuan   ?? ""}}">
+                        <a href="{{route('admin.kegiatan.index')}}" class="nav-link"><i class="fa fa-calendar-check-o"></i><span>Daftar Bantuan</span></a>
+                    </li>
+                </ul>
+            </li>
             {{--manajement akses--}}
             <li class="{{$subUser   ?? ""}} {{$subRole   ?? ""}} {{$subPermission   ?? ""}}  treeview">
                 <a href=""><i class="fa fa-users"></i> <span>Access Management</span>
