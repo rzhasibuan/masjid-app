@@ -4,7 +4,7 @@
     <div class="box table-responsive no-padding">
         <div class="box-body">
             <a href="{{ route('admin.role.create') }}" class="btn btn-primary btn-sm" style="margin-bottom: 10px">
-                <i class="fa fa-plus"></i> Add role</button>
+                <i class="fa fa-plus"></i> Tambah jabatan</button>
             </a>
             @if (session('message'))
                 <x-alert :type="session('type')" :message="session('message')" />
@@ -14,8 +14,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Display Name</th>
+                    <th>Jabatan</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -24,7 +23,6 @@
                     <tr>
                         <td>{{ $role->id }}</td>
                         <td>{{ $role->name }}</td>
-                        <td>{{ $role->display_name }}</td>
                         <td>
                             <form action="{{ route('admin.role.destroy', $role->id) }}" method="post">
                                 @method('DELETE') @csrf

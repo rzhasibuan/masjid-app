@@ -16,12 +16,14 @@ class CreateKegiatanMasjidsTable extends Migration
         Schema::create('kegiatan_masjids', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
+            $table->string('slug');
             $table->text('deskripsi');
             $table->string('tanggal_mulai');
             $table->string('jam_mulai');
             $table->string('tanggal_akhir');
             $table->string('jam_akhir');
             $table->string('lokasi');
+            $table->boolean('published');
             $table->timestamps();
         });
     }

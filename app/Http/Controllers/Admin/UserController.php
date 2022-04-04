@@ -21,7 +21,7 @@ class UserController extends Controller
     {
         $users = User::paginate(10);
         return view('admin.pages.user.index', compact('users'),[
-            'title' => 'Data users',
+            'title' => 'Daftar Tamir Masjid',
             'subUser' => 'active',
         ]);
     }
@@ -35,7 +35,7 @@ class UserController extends Controller
     {
         $roles = Role::all();
         return view('admin.pages.user.create', compact('roles'), [
-            'title' => 'Add user',
+            'title' => 'Tambah anggota',
             'subUser' => 'active',
 
         ]);
@@ -91,7 +91,7 @@ class UserController extends Controller
             $roles = Role::all();
 
             return view('admin.pages.user.edit', compact('user', 'roles'),[
-                'title' => 'Update user',
+                'title' => 'Ubah Anggota',
                 'subUser' => 'active',
             ]);
         } catch (ModelNotFoundException $e) {

@@ -16,21 +16,6 @@
             @endrole
 
             @role('superadmin','admin')
-            <li class="{{$subCreateAtricle   ?? ""}} {{$subShowArticle   ?? ""}}  treeview">
-                <a href=""><i class="fa fa-newspaper-o"></i> <span>News & article</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="nav-item {{$subCreateAtricle   ?? ""}}">
-                        <a href="{{route('admin.news.create')}}" class="nav-link"><i class="fa fa-plus"></i><span>Create Article</span></a>
-                    </li>
-                    <li class="nav-item {{$subShowArticle   ?? ""}}">
-                        <a href="{{route('admin.news.index')}}" class="nav-link"><i class="fa fa-newspaper-o"></i><span>Show Article</span></a>
-                    </li>
-                </ul>
-            </li>
             {{--module keuangan--}}
             <li class="{{$subKeuangan   ?? ""}} {{$subKeuanganLaporan   ?? ""}}  treeview">
                 <a href=""><i class="fa fa-money"></i> <span>Keuangan</span>
@@ -44,23 +29,6 @@
                     </li>
                     <li class="nav-item {{$subKeuanganLaporan   ?? ""}}">
                         <a href="{{route('admin.laporan.kas')}}" class="nav-link"><i class="fa fa-newspaper-o"></i><span>Laporan</span></a>
-                    </li>
-                </ul>
-            </li>
-{{--            ta'mir masjid--}}
-            <li class="{{$subKegiatanCreate   ?? ""}} {{$subKegiatan   ?? ""}}  treeview">
-                <a href=""><i class="fa   fa-sitemap"></i> <span>Ta'mir Masjid</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-
-                    <li class="nav-item {{$subKegiatan   ?? ""}}">
-                        <a href="{{route('admin.tamir.index')}}" class="nav-link"><i class="fa  fa-user"></i><span>Daftar Ta'mir Masjid</span></a>
-                    </li>
-                    <li class="nav-item {{$subKegiatanCreate   ?? ""}}">
-                        <a href="{{route('admin.tamir.create')}}" class="nav-link"><i class="fa  fa-user-plus"></i><span>Tambah Ta'mir Masjid</span></a>
                     </li>
                 </ul>
             </li>
@@ -98,22 +66,18 @@
             </li>
             {{--manajement akses--}}
             <li class="{{$subUser   ?? ""}} {{$subRole   ?? ""}} {{$subPermission   ?? ""}}  treeview">
-                <a href=""><i class="fa fa-users"></i> <span>Access Management</span>
+                <a href=""><i class="fa fa-users"></i> <span>Ta'mir Masjid</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="nav-item {{$subUser   ?? ""}}">
-                        <a href="{{route('admin.user.index')}}" class="nav-link"><i class="fa fa-user"></i><span>User</span></a>
+                        <a href="{{route('admin.user.index')}}" class="nav-link"><i class="fa fa-user"></i><span>Anggota</span></a>
                     </li>
                     <li class="nav-item {{$subRole   ?? ""}}">
-                        <a href="{{route('admin.role.index')}}" class="nav-link"><i class="fa fa-archive"></i><span>Role</span></a>
+                        <a href="{{route('admin.role.index')}}" class="nav-link"><i class="fa fa-archive"></i><span>Jabatan</span></a>
                     </li>
-                    <li class="nav-item {{$subPermission   ?? ""}}">
-                        <a href="{{route('admin.permission.index')}}" class="nav-link"><i class="fa fa-shield"></i><span>Permission</span></a>
-                    </li>
-
                 </ul>
             </li>
             {{--module--}}

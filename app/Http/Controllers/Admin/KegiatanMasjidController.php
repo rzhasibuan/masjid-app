@@ -3,10 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\KegiatanMasjid;
+use App\Traits\FlashAlert;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class KegiatanMasjidController extends Controller
 {
+    use FlashAlert;
+    /**
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,12 @@ class KegiatanMasjidController extends Controller
      */
     public function index()
     {
-        //
+        $data = KegiatanMasjid::orderBy('tanggal_mulai', 'desc')->get();
+        return view('admin.pages.kegiatan.index', [
+            'subKegiatan' => 'active',
+            'title' => 'Jadwal Kegiatan Pengajian',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -24,7 +35,10 @@ class KegiatanMasjidController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.kegiatan.create',[
+            'title' => 'Tambah Kegiatan Jadwal Pengajian',
+            'subKegiatanCreate' => 'active'
+        ]);
     }
 
     /**
@@ -35,7 +49,31 @@ class KegiatanMasjidController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judul'=> 'required|min:5|max:191',
+            'deskripsi' => 'required',
+            'tanggal_mulai' => 'required',
+            'jam_mulai' => 'required',
+            'tanggal_akhir' => 'required',
+            'jam_akhir' => 'required',
+            'lokasi' => 'required',
+            'published' => 'required',
+        ]);
+
+
+        // save in db
+        $kegiatan = KegiatanMasjid::create([
+            'judul' => $request->judul,
+            'slug' => strtolower(Str::slug($request->title. '_'. time())),
+            'deskripsi' => $request->deskripsi,
+            'tanggal_mulai' => $request->tanggal_mulai,
+            'jam_mulai' => $request->jam_mulai,
+            'tanggal_akhir' => $request->tanggal_akhir,
+            'jam_akhir' => $request->jam_akhir,
+            'lokasi' => $request->lokasi,
+            'published' => $request->published
+        ]);
+        return redirect()->route('admin.kegiatan.index')->with($this->alertCreated());
     }
 
     /**
@@ -57,7 +95,15 @@ class KegiatanMasjidController extends Controller
      */
     public function edit($id)
     {
-        //
+        try{
+            $data = KegiatanMasjid::findOrFail($id);
+            return view('admin.pages.kegiatan.edit',[
+                'title' => 'Ubah kegiatan jadwal pengajian',
+                'data' => $data,
+            ]);
+        }catch (ModelNotFoundException $e) {
+            return redirect()->route('admin.kegiatan.index')->with($this->alertNotFound());
+        }
     }
 
     /**
@@ -69,7 +115,37 @@ class KegiatanMasjidController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $data = KegiatanMasjid::findOrFail($id);
+
+            $request->validate([
+                'judul'=> 'required|min:5|max:191',
+                'deskripsi' => 'required',
+                'tanggal_mulai' => 'required',
+                'jam_mulai' => 'required',
+                'tanggal_akhir' => 'required',
+                'jam_akhir' => 'required',
+                'lokasi' => 'required',
+                'published' => 'required',
+            ]);
+
+
+            // save in db
+            $data->update([
+                'judul' => $request->judul,
+                'slug' => strtolower(Str::slug($request->title. '_'. time())),
+                'deskripsi' => $request->deskripsi,
+                'tanggal_mulai' => $request->tanggal_mulai,
+                'jam_mulai' => $request->jam_mulai,
+                'tanggal_akhir' => $request->tanggal_akhir,
+                'jam_akhir' => $request->jam_akhir,
+                'lokasi' => $request->lokasi,
+                'published' => $request->published
+            ]);
+            return redirect()->route('admin.kegiatan.index')->with($this->alertUpdated());
+        }catch (ModelNotFoundException $e){
+            return redirect()->route('admin.kegiatan.index')->with($this->alertNotFound());
+        }
     }
 
     /**
@@ -80,6 +156,12 @@ class KegiatanMasjidController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $data = KegiatanMasjid::findOrFail($id);
+            $data->delete();
+            return redirect()->route('admin.kegiatan.index')->with($this->alertDeleted());
+        }catch (ModelNotFoundException $e){
+            return redirect()->route('admin.kegiatan.index')->with($this->alertNotFound());
+        }
     }
 }

@@ -4,7 +4,7 @@
     <div class="box table-responsive no-padding">
         <div class="box-body">
             <a href="{{ route('admin.user.create') }}" class="btn btn-primary btn-sm" style="margin-bottom: 10px">
-                <i class="fa fa-plus"></i> Add user</button>
+                <i class="fa fa-plus"></i> Tambah Anggota </button>
             </a>
 
             @if (session('message'))
@@ -15,9 +15,9 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
+                    <th>Nama</th>
                     <th>Email</th>
-                    <th>Role</th>
+                    <th>Jabatan</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -36,8 +36,8 @@
                             <form action="{{ route('admin.user.destroy', $user->id) }}" method="post">
                                 @method('DELETE') @csrf
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                    <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-info text-white">Edit</a>
-                                    <button type="submit" class="btn btn-danger text-white">Delete</button>
+                                    <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-info text-white">ubah</a>
+                                    <button type="submit" class="btn btn-danger text-white">hapus</button>
                                 </div>
                             </form>
                         </td>

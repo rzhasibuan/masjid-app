@@ -24,7 +24,7 @@ class RoleController extends Controller
         return view('admin.pages.role.index', [
             'roles' => $role,
             'subRole' => 'active',
-            'title' => 'Roles Data',
+            'title' => 'Jabatan',
         ]);
     }
 
@@ -38,7 +38,7 @@ class RoleController extends Controller
         $permissions = Permission::all();
         return view('admin.pages.role.create', compact('permissions'),[
             'subRole' => 'active',
-            'title' => 'Add Role'
+            'title' => 'Tambah jabatan'
         ]);
     }
 
@@ -97,7 +97,7 @@ class RoleController extends Controller
 
             return view('admin.pages.role.edit', compact('role', 'permissions', 'rolePermissions'),[
                 'subRole' => 'active',
-                'title' => 'Update Role'
+                'title' => 'Ubah Jabatan'
             ]);
         } catch (ModelNotFoundException $e) {
             return redirect()->route('admin.role.index')->with($this->alertNotFound());
