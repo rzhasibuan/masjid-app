@@ -60,10 +60,11 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="nav-item {{$subBantuan   ?? ""}}">
-                        <a href="{{route('admin.kegiatan.index')}}" class="nav-link"><i class="fa fa-calendar-check-o"></i><span>Daftar Bantuan</span></a>
+                        <a href="{{route('admin.bantuan.index')}}" class="nav-link"><i class="fa fa-calendar-check-o"></i><span>Daftar Bantuan</span></a>
                     </li>
                 </ul>
             </li>
+
             {{--manajement akses--}}
             <li class="{{$subUser   ?? ""}} {{$subRole   ?? ""}} {{$subPermission   ?? ""}}  treeview">
                 <a href=""><i class="fa fa-users"></i> <span>Ta'mir Masjid</span>
@@ -80,26 +81,21 @@
                     </li>
                 </ul>
             </li>
-            {{--module--}}
+
+            {{--module Pengaturan--}}
             <li class="{{$subMenu   ?? ""}} {{$subHeader   ?? ""}} {{$subAboutMembership   ?? ""}} {{$subColaboration   ?? ""}} {{$subTestimonials   ?? ""}} {{$subAbout   ?? ""}} treeview">
-                <a href=""><i class="fa fa-sliders"></i> <span>Setting</span>
+                <a href=""><i class="fa fa-sliders"></i> <span>Pengaturan</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-{{--                    <li class="nav-item {{$subMenu   ?? ""}}">--}}
-{{--                        <a href="" class="nav-link"><i class="fa fa-bullseye"></i><span>Menu</span></a>--}}
-{{--                    </li>--}}
                     <li class="nav-item {{$subHeader   ?? ""}}">
                         <a href="{{route('admin.header.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Header</span></a>
                     </li>
                     <li class="nav-item {{$subAbout   ?? ""}}">
                         <a href="{{route('admin.about.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>About</span></a>
                     </li>
-{{--                    <li class="nav-item {{$subAboutMembership   ?? ""}}">--}}
-{{--                        <a href="{{route('admin.about-membership.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>About Membership</span></a>--}}
-{{--                    </li>--}}
                     <li class="nav-item {{$subColaboration   ?? ""}}">
                         <a href="{{route('admin.colaboration.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Colaboration</span></a>
                     </li>
@@ -107,10 +103,7 @@
                         <a href="{{route('admin.testimonials.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Testimonials</span></a>
                     </li>
                 </ul>
-
             </li>
-
-
             @endrole
         </ul>
         <!-- /.sidebar-menu -->

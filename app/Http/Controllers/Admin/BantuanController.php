@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\BantuanMasjid;
 use App\Http\Controllers\Controller;
+use App\Traits\FlashAlert;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class BantuanController extends Controller
 {
+    use FlashAlert;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,12 @@ class BantuanController extends Controller
      */
     public function index()
     {
-        //
+        $data = BantuanMasjid::orderBy('tanggal_akhir', 'desc')->get();
+        return view('admin.pages.bantuan.index', [
+            'subBantuan' => 'active',
+            'title' => 'Bantuan',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -24,7 +33,10 @@ class BantuanController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.bantuan.create',[
+            'title' => 'Tambah Bantuan',
+            'subBantuan' => 'active'
+        ]);
     }
 
     /**
@@ -35,7 +47,26 @@ class BantuanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judul'=> 'required|min:5|max:191',
+            'pemberi' => 'required',
+            'penerima' => 'required',
+            'tanggal_ambil' => 'required',
+            'tanggal_akhir' => 'required',
+            'lokasi' => 'required',
+        ]);
+
+
+        // save in db
+        $kegiatan = BantuanMasjid::create([
+            'judul' => $request->judul,
+            'pemberi' => $request->pemberi,
+            'penerima' => $request->penerima,
+            'tanggal_ambil' => $request->tanggal_ambil,
+            'tanggal_akhir' => $request->tanggal_akhir,
+            'lokasi' => $request->lokasi,
+        ]);
+        return redirect()->route('admin.bantuan.index')->with($this->alertCreated());
     }
 
     /**
@@ -57,7 +88,15 @@ class BantuanController extends Controller
      */
     public function edit($id)
     {
-        //
+        try{
+            $data = BantuanMasjid::findOrFail($id);
+            return view('admin.pages.bantuan.edit',[
+                'title' => 'Ubah data bantuan',
+                'data' => $data,
+            ]);
+        }catch (ModelNotFoundException $e) {
+            return redirect()->route('admin.bantuan.index')->with($this->alertNotFound());
+        }
     }
 
     /**
@@ -69,7 +108,32 @@ class BantuanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $data = BantuanMasjid::findOrFail($id);
+
+            $request->validate([
+                'judul'=> 'required|min:5|max:191',
+                'pemberi' => 'required',
+                'penerima' => 'required',
+                'tanggal_ambil' => 'required',
+                'tanggal_akhir' => 'required',
+                'lokasi' => 'required',
+            ]);
+
+
+            // save in db
+            $data->update([
+                'judul' => $request->judul,
+                'pemberi' => $request->pemberi,
+                'penerima' => $request->penerima,
+                'tanggal_ambil' => $request->tanggal_ambil,
+                'tanggal_akhir' => $request->tanggal_akhir,
+                'lokasi' => $request->lokasi,
+            ]);
+            return redirect()->route('admin.bantuan.index')->with($this->alertUpdated());
+        }catch (ModelNotFoundException $e){
+            return redirect()->route('admin.bantuan.index')->with($this->alertNotFound());
+        }
     }
 
     /**
@@ -80,6 +144,12 @@ class BantuanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $data = BantuanMasjid::findOrFail($id);
+            $data->delete();
+            return redirect()->route('admin.bantuan.index')->with($this->alertDeleted());
+        }catch (ModelNotFoundException $e){
+            return redirect()->route('admin.bantuan.index')->with($this->alertNotFound());
+        }
     }
 }

@@ -15,6 +15,13 @@ class CreateBantuanMasjidsTable extends Migration
     {
         Schema::create('bantuan_masjids', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
+            $table->string('pemberi');
+            $table->string('penerima');
+            $table->string('tanggal_ambil');
+            $table->string('tanggal_akhir');
+            $table->string('lokasi');
+
             $table->timestamps();
         });
     }
