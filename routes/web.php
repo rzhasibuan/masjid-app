@@ -33,7 +33,6 @@ Route::name('admin.') //pemberian nama seperti admin.user.index
     Route::resource('user','UserController');
     Route::resource('role','RoleController');
     Route::resource('permission','PermissionController');
-    Route::resource('news', 'NewsController');
     Route::resource('header', 'HeaderController');
     Route::resource('about-membership', 'AboutMembershipController');
     Route::resource('about', 'AboutController');

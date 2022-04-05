@@ -85,19 +85,6 @@
             </div>
             <div class="col-lg-4 col-xs-6">
                 <!-- small box -->
-                <div class="small-box bg-green">
-                    <div class="inner">
-                       <h3>{{$news}}</h3>
-                        <p>News / Articles</p>
-                    </div>
-                    <div class="icon">
-                        {{-- <i class="ion ion-newspaper"></i> --}}
-                    </div>
-                   <a href="{{route('admin.news.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-6">
-                <!-- small box -->
                 <div class="small-box bg-blue">
                     <div class="inner">
                        <h3>{{$about}}</h3>
@@ -106,7 +93,7 @@
                     <div class="icon">
                         {{-- <i class="ion ion-newspaper"></i> --}}
                     </div>
-                   <a href="{{route('admin.news.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                   <a href="{{route('admin.about.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
