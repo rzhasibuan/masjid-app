@@ -234,7 +234,7 @@ h6 {
 }
 
 .list .fas {
-    color: #594cda;
+    /*color: #594cda;*/
     font-size: 0.75rem;
     line-height: 1.625rem;
 }
@@ -473,7 +473,7 @@ input[type="checkbox"] {
     display: block;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-    color: #93c5fd;
+    color: rgb(22 163 74);
     text-decoration: none;
     line-height: 0.875rem;
     transition: all 0.2s ease;
@@ -501,7 +501,7 @@ input[type="checkbox"] {
 .dropdown.show > a,
 .nav-link:hover,
 .nav-link.active {
-    color: #3b82f6;
+    color: rgb(22 163 74);
     text-decoration: none;
 }
 
@@ -914,7 +914,7 @@ input[type="checkbox"] {
 /*********************/
 .copyright {
     padding-top: 1.5rem;
-    background-color: #1e40af;
+    background-color: rgb(22 163 74);
     text-align: center;
 }
 

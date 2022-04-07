@@ -3,7 +3,7 @@
          data-aos="fade-up"
          data-aos-offset="100"
          data-aos-duration="1000">
-        <h2 class="text-gray-500 my-10">ABOUT ELTA</h2>
+        <h2 class="text-green-500 my-10">TENTANG MASJID AL FATH</h2>
     </div>
     <div class="flex lg:flex-row flex-col max-w-5xl mx-auto my-8  items-center">
         <div class="lg:mx-4 mx-auto flex justify-center w-5/6"
@@ -18,7 +18,7 @@
              data-aos-duration="1000">
             <p class="text-justify p-6 text-gray-500">{{ $about->description ?? "" }}</p>
             <div>
-                <a href="{{route('frontend.about')}}" class="bg-blue-400 text-white py-4 px-6 rounded-full my-4 hover:shadow-lg hover:bg-white hover:text-gray-500">Read More About Us</a>
+                <a href="{{route('frontend.about')}}" class="bg-green-400 text-white py-4 px-6 rounded-full my-4 hover:shadow-lg hover:bg-white hover:text-green-500">Read More About Us</a>
             </div>
         </div>
     </div>

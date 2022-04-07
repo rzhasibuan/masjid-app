@@ -3,7 +3,7 @@
         <h4 class="mb-8 lg:max-w-3xl lg:mx-auto"
             data-aos="fade-up"
             data-aos-offset="100"
-            data-aos-duration="1000">For more information <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">info@eltaorganization.org</a></h4>
+            data-aos-duration="1000">For more information <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">info@masjidalfath.org</a></h4>
         <div class="social-container">
                     <span class="fa-stack">
                         <a href="#your-link">
