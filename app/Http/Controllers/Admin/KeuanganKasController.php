@@ -80,7 +80,7 @@ class KeuanganKasController extends Controller
                 if ($request->nominal >= $lastSaldo->saldo) {
                     return redirect()->route('admin.keuangan.index')->with($this->alertDanger("saldo tidak cukup"));
                 }else{
-                    $saldo = $lastSaldo->saldo + $request->nominal;
+                    $saldo = $lastSaldo->saldo - $request->nominal;
                 }
             }
 

@@ -3,43 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/Logo_Kemenristekdikti.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/bukitlawang.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/conclusion-background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/details-lightbox.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/down-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/elta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/elta2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/elta3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/elta4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/header-uisu-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/icon/001-megaphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/icon/002-magazine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/icon/003-conference.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/icon/004-coding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/icon/005-connection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/icon/006-project-management.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/logo_cms_uhn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/methodist_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/pricing-background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/santomas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/testimonial-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/testimonial-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/testimonial-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/testimonial-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/undraw_preferences_popup_re_4qk0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/undraw_researching_re_fuod.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/images/up-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/collaboration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/collaboration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/copyright.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/copyright.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/features.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/KeuanganKasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/KeuanganKasController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +183,7 @@
       <workItem from="1660982817830" duration="10582000" />
       <workItem from="1661067962056" duration="87000" />
       <workItem from="1661068411598" duration="4331000" />
-      <workItem from="1640995340888" duration="19645000" />
+      <workItem from="1640995340888" duration="20063000" />
     </task>
     <servers />
   </component>
