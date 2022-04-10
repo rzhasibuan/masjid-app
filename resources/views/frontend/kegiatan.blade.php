@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="{{$title ?? ""}}" />
+    <meta name="description" content="{{$data->judul}}" />
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
     <meta property="og:site_name" content="{{$title ?? ""}}" /> <!-- website name -->
-    <meta property="og:site" content="" /> <!-- website link -->
-    <meta property="og:title" content="{{$title ?? ""}}" /> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="{{$title ?? ""}}" /> <!-- description shown in the actual shared post -->
-    <meta property="og:url" content="{{$title ?? ""}}" /> <!-- where do you want your post to link to -->
+    <meta property="og:title" content="{{$data->judul}}" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="{{$data->judul}}" /> <!-- description shown in the actual shared post -->
+    <meta property="og:url" content="{{$data->slug}}" /> <!-- where do you want your post to link to -->
     <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
@@ -31,7 +30,6 @@
     <!-- Favicon  -->
     <link rel="icon" href="{{asset('frontend/images/elta.png')}}" />
 </head>
-
 <body data-spy="scroll" data-target=".fixed-top">
 
 <!-- Navigation -->
@@ -50,14 +48,9 @@
 
     </div> <!-- end of container -->
 </nav> <!-- end of navbar -->
+
 <!-- end of navigation -->
 
-<!-- Header -->
-<header class="my-36 bg-blue-800">
-    <div class="container px-4 sm:px-8 xl:px-4">
-    </div> <!-- end of container -->
-</header> <!-- end of ex-header -->
-<!-- end of header -->
 
 <!-- Load Facebook SDK for JavaScript -->
 <script>(function(d, s, id) {
@@ -71,31 +64,50 @@
 
 <!-- Your share button code -->
 
-<div class="share container px-4 sm:px-8 xl:px-4 ">
-    <h1 class="my-4">Tentang  {{ config('app.name', 'Laravel') }}</h1>
-    <div>
-        <small>Published {{$data->created_at->format('d F, Y, h:i:s A')}}</small>
-    </div>
-    <div class="flex items-center">
-        {{--        <span>Share : &nbsp;</span>--}}
-        <div class="fb-share-button"
-             data-href="https://www.eltaorganization.org/about"
-             data-layout="button_count">
+
+
+<div class="wrapper h-screen my-32">
+    <div class="share container px-4 sm:px-8 xl:px-4 ">
+        <h1>Informasi jadwal Kegiatan Masjid al Fath</h1>
+        <h3 class="my-4">- {{$data->judul}}</h3>
+        <div>
+            <small>Published {{$data->created_at->format('d F, Y, h:i:s A')}}</small> /
+            <small>Updated {{$data->updated_at->format('d F, Y,  h:i:s A')}}</small>
+        </div>
+        <div class="flex items-center">
+            <div class="fb-share-button"
+                 data-href="https://www.eltaorganization.org/blog/{{$data->deskripsi}}"
+                 data-layout="button_count">
+            </div>
         </div>
     </div>
-</div>
 
 
-<div class="ex-basic-1 py-12">
-    <div class="container px-4 sm:px-8">
-        <img class="inline mt-12 mb-4 object-cover object-cover h-96 w-full" src="{{asset('storage/'.$data->thumbnail)}}" alt="alternative" />
+    <div class="ex-basic-1 pt-4">
+        <div class="container px-4 sm:px-8 xl:px-32">
+            <p>Dilaksanakan pada : </p>
+            <table>
+                <tr>
+                    <td class="font-bold">Tanggal & waktu mulai Acara</td>
+                    <td>:</td>
+                    <td>{{$data->tanggal_mulai}} pukul {{$data->jam_mulai}} WIB</td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Tanggal & Waktu berakhir</td>
+                    <td>:</td>
+                    <td>{{$data->tanggal_akhir}} pukul {{$data->jam_akhir}} WIB</td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Tempat & lokasi acara</td>
+                    <td>:</td>
+                    <td>{{$data->lokasi}}</td>
+                </tr>
+            </table>
+            <p class="mb-4">{!! $data->deskripsi !!}</p>
+        </div>
     </div>
+
 </div>
-
-
-<article class="prose max-w-5xl mx-auto mb-5 lg:p-0 p-5">
-    {!! $data->text !!}
-</article>
 
 
 <!-- Copyright -->

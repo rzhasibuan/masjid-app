@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\About;
+use App\BantuanMasjid;
 use App\Colaboration;
 use App\Header;
 //use App\News;
+use App\KegiatanMasjid;
 use App\testimonials;
 use Illuminate\Http\Request;
 
@@ -14,39 +16,44 @@ class FrontendController extends Controller
     public function index()
     {
 //        $news = News::all()->sortByDesc('created_at');
-//        $news = News::orderBy('created_at','desc')->where('published',1)->paginate(3);
+        $kegiatan = KegiatanMasjid::orderBy('created_at','desc')->where('published',1)->paginate(6);
+        $bantuan = BantuanMasjid::orderBy('created_at','desc')->paginate(6);
         $colaboration = Colaboration::all();
         $testimonials = testimonials::all();
         $about = About::all()->first();
 //        dd($about);
         $header = Header::all()->first();
         return view('frontend.welcome', [
-//            'news' => $news,
+            'kegiatan' => $kegiatan,
+            'bantuan' => $bantuan,
             'testimonials' => $testimonials,
             'colaboration' => $colaboration,
             'about' => $about,
             'header' => $header
         ]);
     }
-    public function blog($id){
-//        $data = News::where('slug',$id)->get()->first();
-//        $news = News::orderBy('created_at','desc')->where('published',1)->paginate(3);
-//
-//        return view('frontend.blog', [
-//            'title' => $data->title,
-//            'data' => $data,
-//            'news' => $news
-//        ]);
+
+    public function kegiatan($id){
+        $data = KegiatanMasjid::where('slug',$id)->get()->first();
+        $kegiatan = KegiatanMasjid::orderBy('created_at','desc')->where('published',1)->paginate(3);
+
+        return view('frontend.kegiatan', [
+            'title' => $data->judul,
+            'data' => $data,
+            'kegiatan' => $kegiatan
+        ]);
+
     }
 
-    public function blogs(){
-//        $data = News::where('slug',$id)->get()->first();
-//        $news = News::orderBy('created_at','desc')->where('published',1)->paginate(10);
-//
-//        return view('frontend.blogs', [
-//            'title' => 'news, Infromation & articles',
-//            'news' => $news
-//        ]);
+
+
+    public function kegiatans(){
+        $kegiatan = KegiatanMasjid::orderBy('created_at','desc')->where('published',1)->get();
+
+        return view('frontend.kegiatans', [
+            'title' => 'Jadwal Informasi & Kegiatan Pengajian',
+            'kegiatan' => $kegiatan
+        ]);
     }
 
     public function about(){

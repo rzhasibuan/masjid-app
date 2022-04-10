@@ -930,9 +930,10 @@ a.back-to-top {
     width: 42px;
     height: 42px;
     border-radius: 30px;
-    background: #343e48 url("../images/up-arrow.png") no-repeat center 47%;
+    background: rgb(22 163 74) url("../images/up-arrow.png") no-repeat center 47%;
     background-size: 18px 18px;
     text-indent: -9999px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
 
 a:hover.back-to-top {

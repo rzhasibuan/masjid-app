@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top">
+<nav class="navbar fixed-top shadow-sm">
     <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
 
         <!-- Image Logo -->
@@ -17,13 +17,13 @@
                     <a class="nav-link page-scroll  text-green-600" href="#header">Halaman</a>
                 </li>
                 <li>
-                    <a class="nav-link page-scroll" href="#about">Tentang</a>
+                    <a class="nav-link page-scroll" href="/about">Tentang</a>
                 </li>
                 <li>
-                    <a class="nav-link page-scroll" href="#about">Kegiatan</a>
+                    <a class="nav-link page-scroll" href="#kegiatan">Kegiatan</a>
                 </li>
                 <li>
-                    <a class="nav-link page-scroll" href="#features">Bantuan</a>
+                    <a class="nav-link page-scroll" href="#bantuan">Bantuan</a>
                 </li>
 
 

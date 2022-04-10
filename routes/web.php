@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 // frontend
 Route::get('/', 'FrontendController@index')->name('frontend.index');
 Route::get('/blog/{id}', 'FrontendController@blog')->name('frontend.blog');
+Route::get('/kegiatan/{id}', 'FrontendController@kegiatan')->name('frontend.kegiatan');
+Route::get('/bantuan/{id}', 'FrontendController@bantuan')->name('frontend.bantuan');
 Route::get('/blog', 'FrontendController@blogs')->name('frontend.blogs');
+Route::get('/kegiatan', 'FrontendController@kegiatans')->name('frontend.kegiatans');
+Route::get('/bantuan', 'FrontendController@bantuans')->name('frontend.bantuans');
 Route::get('/about','FrontendController@about')->name('frontend.about');
 // auth
 Auth::routes();

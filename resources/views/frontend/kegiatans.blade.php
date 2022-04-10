@@ -31,7 +31,6 @@
     <!-- Favicon  -->
     <link rel="icon" href="{{asset('frontend/images/elta.png')}}" />
 </head>
-
 <body data-spy="scroll" data-target=".fixed-top">
 
 <!-- Navigation -->
@@ -53,55 +52,38 @@
 <!-- end of navigation -->
 
 <!-- Header -->
-<header class="my-36 bg-blue-800">
-    <div class="container px-4 sm:px-8 xl:px-4">
-    </div> <!-- end of container -->
-</header> <!-- end of ex-header -->
-<!-- end of header -->
+<div class="wrapper h-screen">
+    <header class="my-32">
+        <div class="container px-4 sm:px-8 xl:px-4">
+            <h2 class="text-gray-500 text-center">JADWAL KEGIATAN DAN PENGAJIAN</h2>
+            {{--        <hr>--}}
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-3 grid-cols-1 gap-3 my-10 lg:p-0 p-10">
+                @foreach($kegiatan as $data)
+                    <a href="{{route('frontend.kegiatan', $data->slug)}}">
+                        <div class="rounded-lg overflow-hidden shadow-sm lg:my-3 my-4 mx-4 hover:shadow-xl transition duration-150 w-100"
+                             data-aos="fade-up"
+                             data-aos-offset="100"
+                             data-aos-duration="1000">
+                            {{--                    <img src="{{asset('storage/'.$data->thumbnail)}}" alt="{{$data->title}}"  class="object-cover h-52 w-96">--}}
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2 text-gray-500">{{$data->judul}}</div>
 
-<!-- Load Facebook SDK for JavaScript -->
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+                                <p class="card-text text-gray-400"><small class="text-muted">Tanggal mulai pada {{$data->tanggal_mulai}} pukul {{$data->jam_mulai}} WIB s/d {{$data->tanggal_akhir}} pukul {{$data->jam_akhir}} WIB</small></p>
+                                <p class="card-text text-gray-400"><small class="text-muted">Lokasi:  {{$data->lokasi}}</small></p>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
 
-<!-- Your share button code -->
-
-<div class="share container px-4 sm:px-8 xl:px-4 ">
-    <h1 class="my-4">Tentang  {{ config('app.name', 'Laravel') }}</h1>
-    <div>
-        <small>Published {{$data->created_at->format('d F, Y, h:i:s A')}}</small>
-    </div>
-    <div class="flex items-center">
-        {{--        <span>Share : &nbsp;</span>--}}
-        <div class="fb-share-button"
-             data-href="https://www.eltaorganization.org/about"
-             data-layout="button_count">
+            </div>
         </div>
-    </div>
+    </header>
 </div>
-
-
-<div class="ex-basic-1 py-12">
-    <div class="container px-4 sm:px-8">
-        <img class="inline mt-12 mb-4 object-cover object-cover h-96 w-full" src="{{asset('storage/'.$data->thumbnail)}}" alt="alternative" />
-    </div>
-</div>
-
-
-<article class="prose max-w-5xl mx-auto mb-5 lg:p-0 p-5">
-    {!! $data->text !!}
-</article>
 
 
 <!-- Copyright -->
 @include('frontend.components.copyright')
 <!-- end of copyright -->
-
 
 <!-- Scripts -->
 <script src="{{asset('frontend/js/jquery.min.js')}}"></script> <!-- jQuery for JavaScript plugins -->
