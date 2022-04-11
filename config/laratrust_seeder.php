@@ -12,14 +12,14 @@ return [
     'truncate_tables' => true,
 
     'roles_structure' => [
-        'superadmin' => [
+        'ketua' => [
             'users' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'admin' => [
+        'bendahara' => [
             'users' => 'c,r,u,d',
         ],
-        'user' => [
+        'pengurus' => [
             'profile' => 'r,u',
         ],
 

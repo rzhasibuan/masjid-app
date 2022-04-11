@@ -9,7 +9,12 @@
                  data-aos="fade-up"
                  data-aos-offset="100"
                  data-aos-duration="1000">
-                <h5 class="text-green-100 ">Rp. 7.0000.000</h5>
+                @if(!$saldo == null)
+                    <h5 class="text-green-100 ">Rp. {{number_format($saldo->saldo, 2)}}</h5>
+                @else
+                    <h5 class="text-green-100 ">Rp. 0</h5>
+                @endif
+
             </div>
     </div>
 </div>

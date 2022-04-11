@@ -2,15 +2,68 @@
 @section('content')
 <div class="card-body">
     <h3 class="text-left">Hallo, {{Auth()->user()->name}}</h3>
-    @role('superadmin','admin')
+    @role('ketua','admin')
     <div class="row">
+            <div class="col-lg-4 col-xs-6">
+            <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                       @if(!$saldo == null)
+                            <h3>Rp. {{number_format($saldo->saldo, 2)}}</h3>
+                        @else
+                            <h3>Rp. 0</h3>
+                        @endif
 
+                        <p>Total Saldo </p>
+                    </div>
+                    <div class="icon">
+                        {{-- <i class="ion ion-person-stalker"></i> --}}
+                    </div>
+                      <a href="{{route('admin.keuangan.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
             <div class="col-lg-4 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
+                        @if(!$saldo == null)
+                            <h3>{{$kegiatan->count()}}</h3>
+                        @else
+                            <h3>0</h3>
+                        @endif
+
+                        <p>Jadwal pengajian </p>
+                    </div>
+                    <div class="icon">
+                        {{-- <i class="ion ion-person-stalker"></i> --}}
+                    </div>
+                    <a href="{{route('admin.kegiatan.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        @if(!$saldo == null)
+                            <h3>{{$bantuan->count()}}</h3>
+                        @else
+                            <h3>0</h3>
+                        @endif
+
+                        <p>Bantuan </p>
+                    </div>
+                    <div class="icon">
+                        {{-- <i class="ion ion-person-stalker"></i> --}}
+                    </div>
+                    <a href="{{route('admin.kegiatan.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-blue">
+                    <div class="inner">
                        <h3>{{$users}}</h3>
-                        <p>User Management</p>
+                        <p>Tamir Masjid </p>
                     </div>
                     <div class="icon">
                         {{-- <i class="ion ion-person-stalker"></i> --}}
@@ -23,33 +76,7 @@
                 <div class="small-box bg-blue">
                     <div class="inner">
                        <h3>{{$users}}</h3>
-                        <p>Role Management</p>
-                    </div>
-                    <div class="icon">
-                        {{-- <i class="ion ion-person-stalker"></i> --}}
-                    </div>
-                    <a href="{{route('admin.user.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
-                    <div class="inner">
-                       <h3>{{$permission}}</h3>
-                        <p>Permission</p>
-                    </div>
-                    <div class="icon">
-                        {{-- <i class="ion ion-person-stalker"></i> --}}
-                    </div>
-                    <a href="{{route('admin.user.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-green">
-                    <div class="inner">
-                       <h3>{{$collaboration}}</h3>
-                        <p>Collaboration</p>
+                        <p>Jabatan</p>
                     </div>
                     <div class="icon">
                         {{-- <i class="ion ion-person-stalker"></i> --}}
@@ -60,19 +87,6 @@
             <div class="col-lg-4 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-blue">
-                    <div class="inner">
-                       <h3>{{$testimonials}}</h3>
-                        <p>Tersimonials</p>
-                    </div>
-                    <div class="icon">
-                        {{-- <i class="ion ion-person-stalker"></i> --}}
-                    </div>
-                    <a href="{{route('admin.user.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
                     <div class="inner">
                        <h3>{{$header}}</h3>
                         <p>Header</p>
@@ -85,7 +99,7 @@
             </div>
             <div class="col-lg-4 col-xs-6">
                 <!-- small box -->
-                <div class="small-box bg-blue">
+                <div class="small-box bg-red">
                     <div class="inner">
                        <h3>{{$about}}</h3>
                         <p>About</p>
@@ -98,33 +112,94 @@
             </div>
         </div>
     @endrole
-    @role('user')
-    <div class="box box-solid bg-teal-gradient">
-        <div class="box-body">
-            <h5 class="text-center">Berikut hasil diagnosa anda</h5>
-        </div>
-        <div class="box-footer no-border">
-            <div class="row">
-                 <div class="col-xs-4 col-lg-12 text-center">
-{{--                     @if($statusPasien->value == null)--}}
-{{--                         <input type="text" class="knob" data-readonly="true" value="0" data-width="100" data-height="100"--}}
-{{--                                data-fgColor="red">--}}
-{{--                     @else--}}
-{{--                         <input type="text" class="knob" data-readonly="true" value="{{$statusPasien->value}}" data-width="100" data-height="100"--}}
-{{--                                data-fgColor="red">--}}
-{{--                     @endif--}}
-{{--                     @if($statusPasien->status == null)--}}
-{{--                         <div class="knob-label">Belum di diagnosa</div>--}}
-{{--                     @else--}}
-{{--                         <div class="knob-label">{{$statusPasien->status}}</div>--}}
-{{--                     @endif--}}
-                </div>
-                <!-- ./col -->
+
+    @role('bendahara')
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+            <div class="inner">
+                @if(!$saldo == null)
+                    <h3>Rp. {{number_format($saldo->saldo, 2)}}</h3>
+                @else
+                    <h3>Rp. 0</h3>
+                @endif
+
+                <p>Total Saldo </p>
             </div>
-            <!-- /.row -->
+            <div class="icon">
+                {{-- <i class="ion ion-person-stalker"></i> --}}
+            </div>
+            <a href="{{route('admin.keuangan.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+
+    @endrole
+
+    @role('pengurus')
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+            <div class="inner">
+                @if(!$saldo == null)
+                    <h3>{{$kegiatan->count()}}</h3>
+                @else
+                    <h3>0</h3>
+                @endif
+
+                <p>Jadwal pengajian </p>
+            </div>
+            <div class="icon">
+                {{-- <i class="ion ion-person-stalker"></i> --}}
+            </div>
+            <a href="{{route('admin.kegiatan.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+            <div class="inner">
+                @if(!$saldo == null)
+                    <h3>{{$bantuan->count()}}</h3>
+                @else
+                    <h3>0</h3>
+                @endif
+
+                <p>Bantuan </p>
+            </div>
+            <div class="icon">
+                {{-- <i class="ion ion-person-stalker"></i> --}}
+            </div>
+            <a href="{{route('admin.kegiatan.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-blue">
+            <div class="inner">
+                <h3>{{$header}}</h3>
+                <p>Header</p>
+            </div>
+            <div class="icon">
+                {{-- <i class="ion ion-person-stalker"></i> --}}
+            </div>
+            <a href="{{route('admin.user.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>{{$about}}</h3>
+                <p>About</p>
+            </div>
+            <div class="icon">
+                {{-- <i class="ion ion-newspaper"></i> --}}
+            </div>
+            <a href="{{route('admin.about.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
     @endrole
+
 </div>
 @endsection
 

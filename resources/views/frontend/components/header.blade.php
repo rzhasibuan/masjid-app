@@ -12,7 +12,7 @@
              data-aos="fade-up"
              data-aos-offset="100"
              data-aos-duration="1000">
-            <img class="inline rounded-xl " src="{{asset('storage/')}}/{{$header->thumbnail ?? ""}}" alt="English Lecturers And Teachers Association" />
+            <img class="inline rounded-xl " src="{{asset('storage/')}}/{{$header->thumbnail ?? ""}}" alt="Masjid Al Fath" />
         </div>
     </div> <!-- end of container -->
 </header> <!-- end of header -->

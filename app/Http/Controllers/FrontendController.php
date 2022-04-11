@@ -4,32 +4,27 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\BantuanMasjid;
-use App\Colaboration;
 use App\Header;
-//use App\News;
 use App\KegiatanMasjid;
-use App\testimonials;
+use App\KeuanganKas;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-//        $news = News::all()->sortByDesc('created_at');
         $kegiatan = KegiatanMasjid::orderBy('created_at','desc')->where('published',1)->paginate(6);
         $bantuan = BantuanMasjid::orderBy('created_at','desc')->paginate(6);
-        $colaboration = Colaboration::all();
-        $testimonials = testimonials::all();
         $about = About::all()->first();
-//        dd($about);
         $header = Header::all()->first();
+        $saldo = KeuanganKas::orderBy('id','desc')->first();
         return view('frontend.welcome', [
             'kegiatan' => $kegiatan,
             'bantuan' => $bantuan,
-            'testimonials' => $testimonials,
-            'colaboration' => $colaboration,
             'about' => $about,
-            'header' => $header
+            'header' => $header,
+            'saldo' => $saldo,
+            'title' => 'Sistem informasi Mesjid Al fath'
         ]);
     }
 

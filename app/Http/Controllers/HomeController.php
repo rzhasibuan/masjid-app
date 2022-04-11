@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\About;
-use App\Colaboration;
+use App\BantuanMasjid;
 use App\Header;
+use App\KegiatanMasjid;
+use App\KeuanganKas;
 use App\Models\Permission;
 use App\Models\Role;
-use App\testimonials;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -33,10 +34,11 @@ class HomeController extends Controller
         $user = User::all()->count();
         $role = Role::all()->count();
         $permission = Permission::all()->count();
-        $collaboration = Colaboration::all()->count();
-        $testimonials = testimonials::all()->count();
         $header = Header::all()->count();
         $about = About::all()->count();
+        $saldo = KeuanganKas::orderBy('id','desc')->first();
+        $bantuan = BantuanMasjid::all();
+        $kegiatan = KegiatanMasjid::orderBy('created_at','desc')->where('published',1);
 
         return view('home', [
             'title' => "Dashboard",
@@ -44,10 +46,11 @@ class HomeController extends Controller
             'users' => $user,
             'role' => $role,
             'permission' => $permission,
-            'collaboration' => $collaboration,
-            'testimonials' => $testimonials,
             'header' => $header,
-            'about' => $about
+            'about' => $about,
+            'saldo' => $saldo,
+            'bantuan' => $bantuan,
+            'kegiatan' => $kegiatan,
         ]);
     }
 

@@ -82,7 +82,7 @@
 
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary">simpan</button>
-                    <a href="{{route('admin.news.index')}}" class="btn btn-danger">batal</a>
+                    <a href="{{route('admin.bantuan.index')}}" class="btn btn-danger">batal</a>
                 </div>
         </form>
     </div>

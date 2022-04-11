@@ -89,7 +89,7 @@
 
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Save</button>
-                    <a href="{{route('admin.news.index')}}" class="btn btn-danger">Cancel</a>
+                    <a href="{{route('admin.bantuan.index')}}" class="btn btn-danger">Cancel</a>
                 </div>
         </form>
     </div>

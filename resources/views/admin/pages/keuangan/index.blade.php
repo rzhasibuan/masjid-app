@@ -141,8 +141,8 @@
                         <td>{!!$dt->jenis_catatan == "pemasukan" ? "<small class='label label-success'><i class='fa fa-plus'></i></small>" : "<small class='label label-danger'><i class='fa fa-minus'></i></small>"!!}</td>
                         <td>{{$dt->tanggal_transaksi}}</td>
                         <td>{{$dt->keterangan}}</td>
-                        <td>{{$dt->nominal}}</td>
-                        <td>{{$dt->saldo}}</td>
+                        <td>Rp. {{number_format($dt->nominal, 2)}}</td>
+                        <td>Rp. {{number_format($dt->saldo, 2)}}</td>
                         <td>
                             <form action="{{route('admin.keuangan.destroy',[$dt->id])}}" class="d-inline" onsubmit="return confirm('Apakah anda ingin menghapus ini secara permanen ?')" method="POST">
                                 @csrf

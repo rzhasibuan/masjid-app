@@ -16,7 +16,7 @@ class CreateHeadersTable extends Migration
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
             $table->string('bigtitle');
-            $table->string('text');
+            $table->text('text');
             $table->string('linkButton');
             $table->string('thumbnail');
             $table->timestamps();

@@ -40,8 +40,8 @@
             <td>{{$dt->jenis_catatan}}</td>
             <td>{{$dt->tanggal_transaksi}}</td>
             <td>{{$dt->keterangan}}</td>
-            <td>{{$dt->nominal}}</td>
-            <td>{{$dt->saldo}}</td>
+            <td>Rp. {{number_format($dt->nominal, 2)}}</td>
+            <td>Rp. {{number_format($dt->saldo, 2)}}</td>
         </tr>
     @endforeach
 </table>
