@@ -14,8 +14,8 @@
     {{--                    <img src="{{asset('storage/'.$data->thumbnail)}}" alt="{{$data->title}}"  class="object-cover h-52 w-96">--}}
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2 text-gray-500">{{$data->judul}}</div>
-                            <p>Pemberi bantuan</p>
-                            <p>Penerima bantuan</p>
+                            <p>Pemberi bantuan : <b> {{$data->pemberi}}</b></p>
+                            <p>Penerima bantuan  : <b>{{$data->penerima}}</b></p>
                             <p class="card-text text-gray-400"><small class="text-muted">Tanggal mulai pada {{$data->tanggal_mulai}} pukul {{$data->jam_mulai}} WIB s/d {{$data->tanggal_akhir}} pukul {{$data->jam_akhir}} WIB</small></p>
                             <p class="card-text text-gray-400"><small class="text-muted">Lokasi:  {{$data->lokasi}}</small></p>
                         </div>

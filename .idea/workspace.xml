@@ -3,44 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Colaboration.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AboutMembershipController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ColaborationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TamirMasjidController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestimonialsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MembershipContent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/testimonials.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/laratrust_seeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laratrust_seeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_01_09_150117_create_colaborations_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_05_085003_create_news_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_05_141913_create_menus_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_05_144049_create_membership_contents_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_06_100151_create_testimonials_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_13_100541_create_headers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_02_13_100541_create_headers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/AdminLTE.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/AdminLTE.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/about_membership/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/about_membership/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/about_membership/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/bantuan/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/bantuan/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/bantuan/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/bantuan/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/colaboration/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/colaboration/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/colaboration/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/kegiatan/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/kegiatan/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/laporan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/keuangan/laporan.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/news/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/news/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/news/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/templates/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/templates/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/bantuan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/bantuan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/saldo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/saldo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +190,13 @@
       <workItem from="1660982817830" duration="10582000" />
       <workItem from="1661067962056" duration="87000" />
       <workItem from="1661068411598" duration="4331000" />
-      <workItem from="1640995340888" duration="33698000" />
+      <workItem from="1640995340888" duration="33885000" />
+      <workItem from="1662196422440" duration="314000" />
+      <workItem from="1662257650163" duration="384000" />
+      <workItem from="1662721267063" duration="619000" />
+      <workItem from="1667826620445" duration="2024000" />
+      <workItem from="1667896548523" duration="568000" />
+      <workItem from="1667902429905" duration="60000" />
     </task>
     <servers />
   </component>

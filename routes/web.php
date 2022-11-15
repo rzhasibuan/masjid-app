@@ -19,6 +19,8 @@ Route::get('/bantuan/{id}', 'FrontendController@bantuan')->name('frontend.bantua
 Route::get('/kegiatan', 'FrontendController@kegiatans')->name('frontend.kegiatans');
 Route::get('/bantuan', 'FrontendController@bantuans')->name('frontend.bantuans');
 Route::get('/about','FrontendController@about')->name('frontend.about');
+Route::get('laporan/kas', 'Admin\KeuanganKasController@laporan')->name('laporan.kas');
+
 // auth
 Auth::routes();
 

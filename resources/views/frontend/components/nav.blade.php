@@ -25,6 +25,9 @@
                 <li>
                     <a class="nav-link page-scroll" href="#bantuan">Bantuan</a>
                 </li>
+                <li>
+                    <a class="nav-link page-scroll" href="/login">Login</a>
+                </li>
 
 
             </ul>
