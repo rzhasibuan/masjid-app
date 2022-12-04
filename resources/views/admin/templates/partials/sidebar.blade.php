@@ -20,9 +20,9 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="nav-item {{$subKeuangan   ?? ""}}">
+                    <!-- <li class="nav-item {{$subKeuangan   ?? ""}}">
                         <a href="{{route('admin.keuangan.index')}}" class="nav-link"><i class="fa fa-plus"></i><span>Kas Masjid</span></a>
-                    </li>
+                    </li> -->
                     <li class="nav-item {{$subKeuanganLaporan   ?? ""}}">
                         <a href="{{route('admin.laporan.kas')}}" class="nav-link"><i class="fa fa-newspaper-o"></i><span>Laporan</span></a>
                     </li>
@@ -146,6 +146,23 @@
                     </li>
                 </ul>
             </li>
+
+            <li class="{{$subUser   ?? ""}} {{$subRole   ?? ""}} {{$subPermission   ?? ""}}  treeview">
+                <a href=""><i class="fa fa-users"></i> <span>Ta'mir Masjid</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="nav-item {{$subUser   ?? ""}}">
+                        <a href="{{route('admin.user.index')}}" class="nav-link"><i class="fa fa-user"></i><span>Anggota</span></a>
+                    </li>
+                    <li class="nav-item {{$subRole   ?? ""}}">
+                        <a href="{{route('admin.role.index')}}" class="nav-link"><i class="fa fa-archive"></i><span>Jabatan</span></a>
+                    </li>
+                </ul>
+            </li>
+            
             {{--module Pengaturan--}}
             <li class="{{$subMenu   ?? ""}} {{$subHeader   ?? ""}} {{$subAboutMembership   ?? ""}} {{$subColaboration   ?? ""}} {{$subTestimonials   ?? ""}} {{$subAbout   ?? ""}} treeview">
                 <a href=""><i class="fa fa-sliders"></i> <span>Pengaturan</span>

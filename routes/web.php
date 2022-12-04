@@ -33,9 +33,9 @@ Route::name('admin.') //pemberian nama seperti admin.user.index
 ->prefix('admin')
 ->namespace('Admin')
 ->group(function() {
-    Route::resource('user','UserController')->middleware(['auth','role:ketua']);
-    Route::resource('role','RoleController')->middleware(['auth','role:ketua']);
-    Route::resource('permission','PermissionController')->middleware(['auth','role:ketua']);
+    Route::resource('user','UserController')->middleware(['auth','role:ketua|pengurus']);
+    Route::resource('role','RoleController')->middleware(['auth','role:ketua|pengurus']);
+    Route::resource('permission','PermissionController')->middleware(['auth','role:|pengurus']);
     Route::resource('header', 'HeaderController')->middleware(['auth','role:ketua|pengurus']);
     Route::resource('about', 'AboutController')->middleware(['auth','role:ketua|pengurus']);
     Route::resource('keuangan', 'KeuanganKasController')->middleware(['auth','role:ketua|bendahara']);
