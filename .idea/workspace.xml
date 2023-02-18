@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/templates/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/templates/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/saldo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/saldo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -162,6 +166,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/xampp/htdocs/masjid-app",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -202,6 +207,19 @@
       <workItem from="1667896548523" duration="568000" />
       <workItem from="1667902429905" duration="60000" />
       <workItem from="1670161874116" duration="264000" />
+      <workItem from="1670162776355" duration="6000" />
+      <workItem from="1670162800491" duration="10000" />
+      <workItem from="1670162816384" duration="319000" />
+      <workItem from="1670203332902" duration="52000" />
+      <workItem from="1670203446345" duration="144000" />
+      <workItem from="1670320913286" duration="61000" />
+      <workItem from="1670321927765" duration="9000" />
+      <workItem from="1670324458251" duration="848000" />
+      <workItem from="1670376107903" duration="9000" />
+      <workItem from="1670405978507" duration="636000" />
+      <workItem from="1672326904568" duration="3142000" />
+      <workItem from="1672364918074" duration="16000" />
+      <workItem from="1676728464588" duration="1356000" />
     </task>
     <servers />
   </component>

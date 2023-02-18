@@ -13,7 +13,6 @@
                         @else
                             <h3>Rp. 0</h3>
                         @endif
-
                         <p>Total Saldo </p>
                     </div>
                     <div class="icon">
