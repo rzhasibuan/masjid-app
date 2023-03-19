@@ -16,7 +16,7 @@ class FrontendController extends Controller
         $kegiatan = KegiatanMasjid::orderBy('created_at','desc')->where('published',1)->paginate(6);
         $bantuan = BantuanMasjid::orderBy('created_at','desc')->paginate(6);
         $about = About::all()->first();
-        $header = Header::all()->first();
+        $header = Header::all();
         $saldo = KeuanganKas::orderBy('id','desc')->first();
         return view('frontend.welcome', [
             'kegiatan' => $kegiatan,

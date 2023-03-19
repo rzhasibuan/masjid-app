@@ -87,7 +87,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="nav-item {{$subHeader   ?? ""}}">
-                        <a href="{{route('admin.header.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Header</span></a>
+                        <a href="{{route('admin.header.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Slider</span></a>
                     </li>
                     <li class="nav-item {{$subAbout   ?? ""}}">
                         <a href="{{route('admin.about.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>About</span></a>
@@ -155,7 +155,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="nav-item {{$subHeader   ?? ""}}">
-                        <a href="{{route('admin.header.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Header</span></a>
+                        <a href="{{route('admin.header.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>Slider</span></a>
                     </li>
                     <li class="nav-item {{$subAbout   ?? ""}}">
                         <a href="{{route('admin.about.index')}}" class="nav-link"><i class="fa fa-bullseye"></i><span>About</span></a>

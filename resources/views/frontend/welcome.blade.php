@@ -26,7 +26,8 @@
     <link href="{{asset('frontend/css/fontawesome-all.css')}}" rel="stylesheet" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="{{asset('frontend/css/swiper.css')}}" rel="stylesheet" />
+{{--    <link href="{{asset('frontend/css/swiper.css')}}" rel="stylesheet" />--}}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link href="{{asset('frontend/css/magnific-popup.css')}}" rel="stylesheet" />
     <link href="{{asset('frontend/css/styles.css')}}" rel="stylesheet" />
 
@@ -53,7 +54,7 @@
 
 @include('frontend.components.bantuan')
 
->
+
 
 
 <!-- Copyright -->
@@ -64,12 +65,31 @@
 <!-- Scripts -->
 <script src="{{asset('frontend/js/jquery.min.js')}}"></script> <!-- jQuery for JavaScript plugins -->
 <script src="{{asset('frontend/js/jquery.easing.min.js')}}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-<script src="{{asset('frontend/js/swiper.min.js')}}"></script> <!-- Swiper for image and text sliders -->
+{{--<script src="{{asset('frontend/js/swiper.min.js')}}"></script> <!-- Swiper for image and text sliders -->--}}
 <script src="{{asset('frontend/js/jquery.magnific-popup.js')}}"></script> <!-- Magnific Popup for lightboxes -->
 <script src="{{asset('frontend/js/scripts.js')}}"></script> <!-- Custom scripts -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>
     AOS.init();
+
+    let swiper = new Swiper(".mySwiper", {
+        lazy: true,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 </script>
 
 </body>

@@ -17,16 +17,23 @@ class HeaderController extends Controller
      */
     public function index()
     {
-        $header = Header::get();
-        if($header->count() > 0){
-           return redirect()->route('admin.header.edit',$header->first()->id);
-        }else{
-            return view('admin.pages.header.index',[
-                'title' => 'Setting header',
-                'subHeader' => 'active'
-            ]);
+//        $header = Header::get();
+//        if($header->count() > 0){
+//           return redirect()->route('admin.header.edit',$header->first()->id);
+//        }else{
+//            return view('admin.pages.header.index',[
+//                'title' => 'Setting header',
+//                'subHeader' => 'active'
+//            ]);
+//
+//
+        $header = Header::all();
 
-        }
+        return view('admin.pages.header.index',[
+                'title' => 'Setting header',
+                'subHeader' => 'active',
+                'data' => $header
+            ]);
     }
 
     /**
@@ -36,7 +43,10 @@ class HeaderController extends Controller
      */
     public function create()
     {
-
+        return view('admin.pages.header.create',[
+            'title' => 'Tambah header',
+            'subHeader' => 'active',
+        ]);
     }
 
     /**
@@ -156,6 +166,9 @@ class HeaderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Header::findOrFail($id);
+        $data->delete();
+
+        return redirect()->route('admin.header.index')->with($this->alertDeleted());
     }
 }
