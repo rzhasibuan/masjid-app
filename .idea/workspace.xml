@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06e5960a-49a2-4176-8909-1b095874787f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/About.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/About.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HeaderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HeaderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/about/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/about/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/about/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/about/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/saldo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/saldo.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +206,7 @@
       <workItem from="1667896548523" duration="568000" />
       <workItem from="1667902429905" duration="60000" />
       <workItem from="1679148749353" duration="17878000" />
-      <workItem from="1679281846872" duration="698000" />
+      <workItem from="1679281846872" duration="1371000" />
     </task>
     <servers />
   </component>
