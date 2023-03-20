@@ -16,6 +16,7 @@ class AddNewFieldToNorekTable extends Migration
         Schema::table('abouts', function (Blueprint $table) {
             $table->string('no_rekening')->nullable();
             $table->string('no_whatsapp')->nullable();
+
         });
     }
 
