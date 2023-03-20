@@ -55,6 +55,28 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="no_rekening">No Rekening </label>
+                    <input type="text" class="form-control" id="no_rekening" placeholder="please insert rekening number" name="no_rekening" value="{{$data->no_rekening}}">
+                    {{-- <p class="help-block">Example block-level help text here.</p> --}}
+                    <div class="has-error">
+                    <span class="help-block">
+                        {{$errors->first('no_rekening')}}
+                    </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="no_whatsapp">No WhatsApp </label>
+                    <input type="text" class="form-control" id="no_whatsapp" placeholder="please insert whatsapp number" name="no_whatsapp" value="{{$data->no_whatsapp}}">
+                    {{-- <p class="help-block">Example block-level help text here.</p> --}}
+                    <div class="has-error">
+                    <span class="help-block">
+                        {{$errors->first('no_whatsapp')}}
+                    </span>
+                    </div>
+                </div>
+
 
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Update</button>

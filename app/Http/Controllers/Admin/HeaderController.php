@@ -61,7 +61,7 @@ class HeaderController extends Controller
             'bigTitle'=> 'required|min:5|max:191',
             'text' => 'required',
             'linkButton'=> 'required|min:5|max:191',
-            'thumbnail' => 'required|image|mimes:jpg,jpeg,png,gif|max:521'
+            'thumbnail' => 'image|mimes:jpg,jpeg,png,gif|max:1021'
         ]);
 
         // thumbnail upload
@@ -124,7 +124,7 @@ class HeaderController extends Controller
                 'bigTitle'=> 'required|min:5|max:191',
                 'text' => 'required',
                 'linkButton'=> 'required|min:5|max:191',
-                'thumbnail' => 'image|mimes:jpg,jpeg,png,gif|max:521'
+                'thumbnail' => 'image|mimes:jpg,jpeg,png,gif|max:1021'
             ]);
 
             if($request->file('thumbnail') === null) {
