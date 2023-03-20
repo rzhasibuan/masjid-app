@@ -65,6 +65,8 @@ class AboutController extends Controller
             'thumbnail' => $thumbnailFile,
             'description' => $request->description,
             'text' => $request->text,
+            'no_rekening' => $request->no_rekening,
+            'no_whatsapp' => $request->no_whatsapp
         ]);
         return redirect()->route('admin.about.index')->with($this->alertCreated());
     }
@@ -118,6 +120,8 @@ class AboutController extends Controller
                 $data->update([
                     'description' => $request->description,
                     'text' => $request->text,
+                    'no_rekening' => $request->no_rekening,
+                    'no_whatsapp' => $request->no_whatsapp
                 ]);
                 return redirect()->route('admin.about.index')->with($this->alertUpdated());
             }
@@ -135,6 +139,8 @@ class AboutController extends Controller
                 'thumbnail' => $thumbnailFile,
                 'description' => $request->description,
                 'text' => $request->text,
+                'no_rekening' => $request->no_rekening,
+                'no_whatsapp' => $request->no_whatsapp
             ]);
             return redirect()->route('admin.about.index')->with($this->alertUpdated());
         }catch (ModelNotFoundException $e){
